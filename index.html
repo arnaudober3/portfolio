@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arnaud Ober — Développeur senior</title>
+  <meta name="description" content="Votre produit marche. Il ne tient pas. Développeur senior à temps partagé pour la phase de consolidation de votre SaaS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="container site-header">
+    <div class="site-name">Arnaud Ober</div>
+    <nav class="site-nav">
+      <a href="etude-de-cas.html">Étude de cas</a>
+      <a href="#contact">Me contacter</a>
+    </nav>
+  </header>
+
+  <main class="container home">
+
+    <section class="hero">
+      <h1>
+        Votre produit marche.<br>
+        <span>Il ne tient pas.</span>
+      </h1>
+      <p class="hero-intro">
+        Vous avez des clients qui paient et un produit qui répond à un vrai besoin. Et pourtant, chaque semaine, quelque chose se fissure à un endroit différent.
+      </p>
+      <p>
+        J'interviens à ce moment-là.
+      </p>
+    </section>
+
+    <section>
+      <h2>Vous en êtes probablement là</h2>
+      <ul class="dash-list">
+        <li>Vous codez encore vous-même, et ça vous empêche de faire le reste</li>
+        <li>Chaque nouvelle fonctionnalité en casse une autre, et vous ne savez plus estimer</li>
+        <li>Quelqu'un dans l'équipe fait à la main ce que le produit devrait faire tout seul</li>
+        <li>Vous ne pouvez pas vous offrir un CTO senior, et vous ne pourriez pas l'attirer</li>
+        <li>Vous hésitez à recruter parce que vous n'êtes pas sûr de savoir encadrer</li>
+      </ul>
+      <p class="muted">
+        Ce n'est pas un problème de vélocité. C'est le moment où un produit qui fonctionne doit devenir un produit qui tient.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ce que je fais</h2>
+      <p>
+        Je suis le développeur senior que vous ne pouvez pas encore recruter.
+      </p>
+      <p>
+        Concrètement : j'arbitre les décisions techniques, je porte les chantiers de fond que personne n'a le temps de prendre, et je livre. Pas de conseil sans exécution — je code ce que je recommande.
+      </p>
+      <p>
+        Ma spécialité, c'est la phase de consolidation : facturation et encaissement, fiabilité en production, suppression des classes de bugs plutôt que des bugs, industrialisation de ce qui est encore manuel.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="tight">La preuve</h2>
+      <p class="muted proof-intro">
+        Un SaaS de gestion immobilière au Québec, sur lequel je travaille depuis plusieurs années : de quelques clients pilotes à plusieurs centaines de clients payants, sans que la production ne cède.
+      </p>
+      <svg class="growth-chart" viewBox="0 0 640 260" role="img" aria-label="Croissance des clients payants : de quelques clients pilotes à plusieurs centaines de clients payants">
+        <line x1="30" y1="210" x2="610" y2="210" class="chart-axis"/>
+        <path d="M70,210 L70,192 L320,138 L570,45 L570,210 Z" class="chart-area"/>
+        <path d="M70,192 L320,138 L570,45" class="chart-line"/>
+        <g class="chart-points">
+          <circle cx="70" cy="192" r="5"/>
+          <circle cx="320" cy="138" r="5"/>
+          <circle cx="570" cy="45" r="5"/>
+        </g>
+        <g class="chart-values" text-anchor="middle">
+          <text x="70" y="172">quelques clients pilotes</text>
+          <text x="320" y="118">dizaines de clients</text>
+          <text x="570" y="25">plusieurs centaines</text>
+        </g>
+        <g class="chart-labels" text-anchor="middle">
+          <text x="70" y="232">Départ</text>
+          <text x="320" y="232">Croissance</text>
+          <text x="570" y="232">Aujourd'hui</text>
+        </g>
+      </svg>
+      <p class="chart-link">
+        <a href="etude-de-cas.html">Lire l'étude de cas détaillée →</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Comment ça se passe</h2>
+      <p>
+        <strong>2 à 3 jours par semaine</strong>, en engagement trimestriel renouvelable.
+      </p>
+      <p>
+        Ce format n'est pas un compromis, c'est un choix. Assez de présence pour porter des chantiers qui durent plusieurs semaines et pour être disponible quand ça brûle. Assez de distance pour rester utile sur les arbitrages plutôt que de devenir une paire de mains de plus.
+      </p>
+      <p>
+        Je travaille en écrit et en asynchrone par défaut, avec un point hebdomadaire. Vous n'aurez pas à me manager.
+      </p>
+      <p class="price">À partir de 6 500 € / mois.</p>
+    </section>
+
+    <section>
+      <h2>Ce que je ne fais pas</h2>
+      <ul class="dash-list dash-list--muted">
+        <li>Les missions courtes et les dépannages ponctuels</li>
+        <li>Le développement d'un MVP à partir de zéro — je prends le relais après</li>
+        <li>Le pur conseil, les audits sans suite, les recommandations que quelqu'un d'autre exécutera</li>
+        <li>Les régies en ESN et les prestations au forfait sur cahier des charges figé</li>
+      </ul>
+      <p class="muted">
+        Si c'est ce dont vous avez besoin, je connais des gens que je peux vous recommander.
+      </p>
+    </section>
+
+    <section class="tech-section">
+      <h2 class="tight">Contexte technique</h2>
+      <p>
+        TypeScript de bout en bout. Angular, React, NestJS. Monorepos, conteneurisation, CI, supervision en production, une solution de paiement. J'ai aussi industrialisé l'IA dans mon propre processus de développement — c'est une des raisons pour lesquelles deux jours par semaine suffisent à porter de vrais chantiers.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Démarrer</h2>
+      <p class="contact-intro">
+        Écrivez-moi en décrivant où vous en êtes : votre produit, combien de clients payants, et ce qui vous inquiète le plus en ce moment.
+      </p>
+      <p class="muted contact-reply">
+        Je réponds en deux jours ouvrés. Si je ne suis pas la bonne personne, je vous le dirai tout de suite.
+      </p>
+      <a class="contact-email" href="mailto:arnaud_webdev@icloud.com">arnaud_webdev@icloud.com</a>
+    </section>
+
+    <footer class="home-footer">
+      <p>Basé à Montpellier. Je travaille avec des clients en France, en Europe et au Canada.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

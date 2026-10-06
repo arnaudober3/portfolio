@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Étude de cas — Arnaud Ober</title>
+  <meta name="description" content="De quelques clients pilotes à plusieurs centaines de clients payants, sans que la production ne cède.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="container site-header">
+    <div class="site-name">Arnaud Ober</div>
+    <a href="index.html">← Accueil</a>
+  </header>
+
+  <!-- Replace with <img src="…" alt="…"> and drop the cover--empty class once the cover photo exists. -->
+  <div class="cover cover--empty" aria-hidden="true">photo de couverture — étude de cas</div>
+
+  <main class="container case-study">
+
+    <section>
+      <h1>De quelques clients pilotes à plusieurs centaines de clients payants, sans que la production ne cède</h1>
+
+      <dl class="facts">
+        <div>
+          <dt>Client</dt>
+          <dd>SaaS de gestion immobilière, Québec (nom anonymisé à la demande du client)</dd>
+        </div>
+        <div>
+          <dt>Mission</dt>
+          <dd>En cours depuis plusieurs années, 2 à 3 jours par semaine</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>Angular, NestJS, MySQL, monorepo</dd>
+        </div>
+      </dl>
+
+      <p class="lede">
+        Quand j'ai commencé sur ce produit, il comptait quelques clients pilotes. Aujourd'hui il en a plusieurs centaines, et le produit tient : l'encaissement ne s'effondre pas quand le volume grandit, les documents générés engagent l'entreprise, et la production ne casse plus sans que personne ne le sache. Rien de tout cela n'existait au début. Voici comment ça s'est construit.
+      </p>
+    </section>
+
+    <section>
+      <p><strong>Encaisser.</strong></p>
+      <p>
+        <strong>Le problème :</strong> chaque facture partait par email, chaque paiement se suivait dans un tableau. Ça tenait à un client. Pas à dix, encore moins à cent.
+      </p>
+      <p>
+        <strong>La décision :</strong> construire la chaîne d'encaissement sur une solution de paiement, de la facturation récurrente au rapprochement des paiements, directement dans le produit.
+      </p>
+      <p>
+        <strong>Le résultat :</strong> l'encaissement suit la croissance sans intervention manuelle. Le produit est passé de quelques clients pilotes à plusieurs centaines de clients payants sans que cette chaîne devienne le goulot d'étranglement.
+      </p>
+    </section>
+
+    <section>
+      <p><strong>Le document légal.</strong></p>
+      <p>
+        <strong>Le problème :</strong> ces documents étaient produits par les experts métier à partir d'un template rempli à la main, un par un. Un processus manuel répété à chaque document, à sécuriser à mesure que le volume augmente.
+      </p>
+      <p>
+        <strong>La décision :</strong> générer ces documents directement à partir des données du produit, avec la mise en forme et les mentions imposées par le système plutôt que laissées à la saisie.
+      </p>
+      <p>
+        <strong>Le résultat :</strong> les documents se génèrent de façon identique et reproductible, à n'importe quel volume, sans étape manuelle à sécuriser.
+      </p>
+    </section>
+
+    <section>
+      <p><strong>Le calcul qui ne peut plus diverger.</strong></p>
+      <p>
+        <strong>Le problème :</strong> la logique de calcul — prévoyance, projections, scénarios — était implémentée à plusieurs endroits du code, côté serveur comme côté client. Deux implémentations séparées d'une même règle, qu'il faut maintenir rigoureusement synchronisées pour qu'elles restent d'accord.
+      </p>
+      <p>
+        <strong>La décision :</strong> réunir cette logique dans un paquet unique, au sein d'un monorepo, consommé aussi bien par les écrans que par la génération de documents. Une seule implémentation, une seule source de vérité.
+      </p>
+      <p>
+        <strong>Le résultat :</strong> la question de la cohérence entre deux calculs ne se pose plus — il n'y a plus qu'un calcul. Ce que voit l'utilisateur à l'écran et ce que porte le document reposent sur le même code.
+      </p>
+    </section>
+
+    <section>
+      <p><strong>Savoir quand c'est cassé.</strong></p>
+      <p>
+        <strong>Le problème :</strong> un grand nombre d'alertes de production actives, mélangeant erreurs réelles et écarts de règles métier attendus. Assez de bruit pour que plus personne ne les regarde vraiment, et pour que les vraies erreurs se perdent dans le lot.
+      </p>
+      <p>
+        <strong>La décision :</strong> revoir chaque alerte une par une — la garder si elle signale un problème réel et actionnable, la supprimer ou la fusionner sinon.
+      </p>
+      <p>
+        <strong>Le résultat :</strong> le volume d'alertes réduit de moitié. Moins de bruit, plus de signal — quand quelque chose sonne, ça veut dire quelque chose.
+      </p>
+    </section>
+
+    <section>
+      <h2>En résumé</h2>
+      <p>
+        Rien de ce chantier n'est visible pour un utilisateur du produit. C'est précisément le but : le produit devient plus fiable sans jamais changer de visage. C'est ce travail-là, plus que les nouvelles fonctionnalités, qui a permis au produit d'absorber une croissance de quelques clients pilotes à plusieurs centaines de clients payants sans jamais revenir en arrière.
+      </p>
+    </section>
+
+    <section>
+      <p class="note">
+        Angular en frontend, NestJS en backend, MySQL, le tout dans un monorepo unique pour partager la logique métier.
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <a href="index.html">← Retour à l'accueil</a>
+      <a href="mailto:arnaud_webdev@icloud.com">arnaud_webdev@icloud.com</a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
